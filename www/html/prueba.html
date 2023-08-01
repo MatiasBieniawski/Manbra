@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Piano Interactivo</title>
+  <style>
+    .piano-key {
+      width: 50px;
+      height: 200px;
+      background-color: white;
+      border: 1px solid black;
+      display: inline-block;
+    }
+    .black-key {
+      width: 30px;
+      height: 130px;
+      background-color: black;
+      position: relative;
+      top: -130px;
+      left: -15px;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Piano Interactivo</h1>
+  <div class="piano">
+    <div class="piano-key" onclick="playSound('C')"></div>
+    <div class="piano-key black-key" onclick="playSound('C#')"></div>
+    <div class="piano-key" onclick="playSound('D')"></div>
+    <div class="piano-key black-key" onclick="playSound('D#')"></div>
+    <div class="piano-key" onclick="playSound('E')"></div>
+    <div class="piano-key" onclick="playSound('F')"></div>
+    <div class="piano-key black-key" onclick="playSound('F#')"></div>
+    <div class="piano-key" onclick="playSound('G')"></div>
+    <div class="piano-key black-key" onclick="playSound('G#')"></div>
+    <div class="piano-key" onclick="playSound('A')"></div>
+    <div class="piano-key black-key" onclick="playSound('A#')"></div>
+    <div class="piano-key" onclick="playSound('B')"></div>
+  </div>
+
+  <script>
+    function playSound(note) {
+      // Aquí debes agregar la lógica para reproducir el sonido correspondiente a la nota
+      // Por ejemplo, puedes usar librerías como Web Audio API o simplemente audios pregrabados
+      // dependiendo de tus necesidades.
+      console.log("Se ha tocado la nota: " + note);
+    }
+  </script>
+</body>
+</html>
