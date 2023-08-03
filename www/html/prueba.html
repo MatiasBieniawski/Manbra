@@ -3,13 +3,27 @@
 <head>
   <title>Piano Interactivo</title>
   <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .piano {
+      display: flex;
+    }
+
     .piano-key {
       width: 50px;
       height: 200px;
       background-color: white;
       border: 1px solid black;
       display: inline-block;
+      cursor: pointer;
     }
+
     .black-key {
       width: 30px;
       height: 130px;
@@ -18,32 +32,31 @@
       top: -130px;
       left: -15px;
       z-index: 1;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <h1>Piano Interactivo</h1>
   <div class="piano">
-    <div class="piano-key" onclick="playSound('C')"></div>
-    <div class="piano-key black-key" onclick="playSound('C#')"></div>
-    <div class="piano-key" onclick="playSound('D')"></div>
-    <div class="piano-key black-key" onclick="playSound('D#')"></div>
-    <div class="piano-key" onclick="playSound('E')"></div>
-    <div class="piano-key" onclick="playSound('F')"></div>
-    <div class="piano-key black-key" onclick="playSound('F#')"></div>
-    <div class="piano-key" onclick="playSound('G')"></div>
-    <div class="piano-key black-key" onclick="playSound('G#')"></div>
-    <div class="piano-key" onclick="playSound('A')"></div>
-    <div class="piano-key black-key" onclick="playSound('A#')"></div>
-    <div class="piano-key" onclick="playSound('B')"></div>
+    <div class="piano-key" onclick="playSound('path/to/C.wav')"></div>
+    <div class="piano-key black-key" onclick="playSound('path/to/C#.wav')"></div>
+    <div class="piano-key" onclick="playSound('path/to/D.wav')"></div>
+    <div class="piano-key black-key" onclick="playSound('path/to/D#.wav')"></div>
+    <div class="piano-key" onclick="playSound('path/to/E.wav')"></div>
+    <div class="piano-key" onclick="playSound('path/to/F.wav')"></div>
+    <div class="piano-key black-key" onclick="playSound('path/to/F#.wav')"></div>
+    <div class="piano-key" onclick="playSound('path/to/G.wav')"></div>
+    <div class="piano-key black-key" onclick="playSound('path/to/G#.wav')"></div>
+    <div class="piano-key" onclick="playSound('path/to/A.wav')"></div>
+    <div class="piano-key black-key" onclick="playSound('path/to/A#.wav')"></div>
+    <div class="piano-key" onclick="playSound('path/to/B.wav')"></div>
   </div>
 
   <script>
-    function playSound(note) {
-      // Aquí debes agregar la lógica para reproducir el sonido correspondiente a la nota
-      // Por ejemplo, puedes usar librerías como Web Audio API o simplemente audios pregrabados
-      // dependiendo de tus necesidades.
-      console.log("Se ha tocado la nota: " + note);
+    function playSound(soundPath) {
+      const audio = new Audio(soundPath);
+      audio.play();
     }
   </script>
 </body>
