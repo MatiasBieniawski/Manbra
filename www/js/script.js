@@ -28,7 +28,7 @@ const handleVolume = (e) => {
 
 const showHideKeys = () => {
     // toggling hide class from each key on the checkbox click
-    pianoKeys.forEach(key => key.classList.toggle(false));
+    pianoKeys.forEach(key => key.classList.toggle("hide"));
 }
 
 const pressedKey = (e) => {
